@@ -1,5 +1,9 @@
-public class Controller {
+import javax.swing.*;
+import java.net.MalformedURLException;
+import java.net.URL;
 
+public class Controller {
+    private static View view;
 
 
 
@@ -21,6 +25,11 @@ public class Controller {
 
     //Start of main function
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        view = new View();
+        try {
+            view.Setup();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
     }
 }
